@@ -21,7 +21,7 @@
   $res = (object)[]; 
   // 
   $access_token = null;
-  
+
   // Connect to MySQL Server with mysqli
   $mysqli = new mysqli($config['database']['host'], 
                        $config['database']['username'], 
@@ -55,7 +55,7 @@
 
   // Insert new tokens
   $new_token = generateRandomString(5);
-  $mysqli->query("INSERT INTO fl_telnet_access_tokens VALUES('$remoteIP', $user_id, '$new_token')");
+  $mysqli->query("INSERT INTO fl_telnet_access_tokens(remote_addr, user_id, access_token, flarum_token) VALUES('$remoteIP', $user_id, '$new_token', '$access_token')");
   
   // Create a new token and insert into database
   $res->status = 'success';
