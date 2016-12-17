@@ -3,8 +3,6 @@ Portal
 
 This is a simple util that will generate a token that can be used to log-in in some non-secure sub sites (e.g. telnet, legacy site). 
 
-TODO: 
-
 ### HTML Example
 ```html
 <h1>Telnet 论坛</h1>
